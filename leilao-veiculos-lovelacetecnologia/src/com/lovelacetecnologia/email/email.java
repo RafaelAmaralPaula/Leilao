@@ -6,6 +6,8 @@ import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
 public class email {
+	
+	
 
 	public void enviar(String para , String assunto , String msg) throws EmailException{
 		
@@ -23,4 +25,8 @@ public class email {
 		email.send();
 		
 	}
+	
+	
+	
+	
 }

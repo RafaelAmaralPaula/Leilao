@@ -56,7 +56,7 @@ public class Main {
 		while (continuaCadastrando) {
 
 			Jogador jogador = new Jogador();
-			jogador.preco = new Preco();
+			jogador.preco= new Preco();
 
 			System.out.println("Jogador " + " [ " + contador + "]");
 
