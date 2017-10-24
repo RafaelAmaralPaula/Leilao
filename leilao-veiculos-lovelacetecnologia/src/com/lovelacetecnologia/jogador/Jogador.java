@@ -7,7 +7,7 @@ public class Jogador {
 	private Integer id;
 	private String nome;
 	private String email;
-	public Preco preco;
+	public  Preco preco;
 
 	public String getEmail() {
 		return email;
@@ -17,7 +17,6 @@ public class Jogador {
 		this.email = email;
 	}
 
-	
 	public Integer getId() {
 		return id;
 	}
@@ -26,15 +25,12 @@ public class Jogador {
 		this.id = id;
 	}
 
-	
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
+	}	
 
-	
-	
 }

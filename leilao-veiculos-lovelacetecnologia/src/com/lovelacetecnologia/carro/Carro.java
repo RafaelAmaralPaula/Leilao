@@ -8,7 +8,7 @@ public class Carro {
 	private int anoFabricacao;
 	private String cor;
 	private boolean tipoCombustivel;
-	public Jogador dono;
+	private Jogador jogador;
 
 	public String getModelo() {
 		return modelo;
@@ -34,6 +34,16 @@ public class Carro {
 		this.cor = cor;
 	}
 
+	
+	public Jogador getJogador() {
+		return jogador;
+	}
+
+	public void setJogador(Jogador jogador) {
+		this.jogador = jogador;
+	}
+
+	
 	public boolean isTipoCombustivel() {
 		return tipoCombustivel;
 	}
@@ -41,5 +51,9 @@ public class Carro {
 	public void setTipoCombustivel(boolean tipoCombustivel) {
 		this.tipoCombustivel = tipoCombustivel;
 	}
+	
+	
+	
+	
 
 }

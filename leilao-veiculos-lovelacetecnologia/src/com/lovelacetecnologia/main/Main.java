@@ -3,7 +3,6 @@ package com.lovelacetecnologia.main;
 import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
-
 import org.apache.commons.mail.EmailException;
 
 import com.lovelacetecnologia.carro.Carro;
@@ -18,7 +17,7 @@ public class Main {
 
 		Scanner teclado = new Scanner(System.in);
 		Carro carro = new Carro();
-	    email enviarEmail = new email();
+		email enviarEmail = new email();
 		Service servico = new Service();
 		Random random = new Random();
 		Date data = new Date();
@@ -56,7 +55,7 @@ public class Main {
 		while (continuaCadastrando) {
 
 			Jogador jogador = new Jogador();
-			jogador.preco= new Preco();
+			jogador.preco = new Preco();
 
 			System.out.println("Jogador " + " [ " + contador + "]");
 
@@ -93,23 +92,30 @@ public class Main {
 			}
 		}
 
-		System.out.println(
-				"==================================================================================================");
+		System.out.println("==================================================================================================");
+		
 		System.err.println("Ganhador Do Leilão ! ");
 		System.out.println("");
 		System.out.println("Realizado pela LovelaceTecnologia / " + data.toString());
 		System.out.println("");
 		System.out.println("Parabéns !");
-		System.out.println(
-				"Ganhador do Leilão é :" + novoDonoVeiculo + " novo proprietario do veiculo " + carro.getModelo());
+		System.out.println("Ganhador do Leilão é :" + novoDonoVeiculo + " novo proprietario do veiculo " + carro.getModelo());
 		System.out.println("");
 		System.out.println("Veiculo Leiluado Por:R$" + preco);
+		
 		System.out.println("==================================================================================================");
 
 		String mensagem = (" Parabéns ! " + novoDonoVeiculo + " você novo proprietario do veiculo " + carro.getModelo()+ " muito obrigado pela participação no Leilão Abraço ! ! ! ");
-		String assunto = ("Leilão de Veiculos");
+	    String assunto = ("Leilão de Veiculos");
 		enviarEmail.enviar(enviarPara, assunto, mensagem);
-
+		
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 		System.out.println("");
 		System.out.println("Email Enviado Com Sucesso !");
 		teclado.close();
